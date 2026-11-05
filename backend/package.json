@@ -1,0 +1,28 @@
+{
+  "name": "@vuiphim/backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/index.js",
+    "start": "node --env-file-if-exists=.env src/index.js",
+    "migrate": "node --env-file-if-exists=.env src/database/migrate.js",
+    "admin:create": "node --env-file-if-exists=.env src/scripts/createAdmin.js",
+    "test": "node --env-file-if-exists=.env --test tests/*.test.js",
+    "check": "node ../scripts/check-js.mjs"
+  },
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "pg": "^8.16.0",
+    "zod": "^4.6.7"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.15"
+  }
+}

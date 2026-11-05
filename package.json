@@ -1,0 +1,29 @@
+{
+  "name": "vuiphim",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "start": "npm start -w backend",
+    "db:migrate": "npm run migrate -w backend",
+    "admin:create": "npm run admin:create -w backend",
+    "test": "npm test -w backend",
+    "check": "npm run check -w backend && npm run build",
+    "format": "prettier --write backend/src backend/tests backend/package.json frontend/src frontend/index.html frontend/vite.config.js frontend/package.json scripts docs README.md package.json compose.yaml compose.dev.yaml .github/workflows/ci.yml",
+    "format:check": "prettier --check backend/src backend/tests backend/package.json frontend/src frontend/index.html frontend/vite.config.js frontend/package.json scripts docs README.md package.json compose.yaml compose.dev.yaml .github/workflows/ci.yml",
+    "setup": "node scripts/setup-env.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "prettier": "^3.9.10"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules
+.npm-cache
+dist
+frontend/dist
+package-lock.json
+media
+data
+backups

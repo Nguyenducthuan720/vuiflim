@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.git
+.env
+**/.env
+.npm-cache
+data
+media
+backups
+*.log
+backend/tests

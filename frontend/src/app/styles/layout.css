@@ -1,0 +1,200 @@
+.app-header {
+  position: relative;
+  height: 80px;
+  background: #0c0c10;
+  border-bottom: 1px solid #ffffff0d;
+  padding: 0 5%;
+  gap: 32px;
+}
+.app-header nav {
+  gap: 23px;
+}
+.app-header nav button {
+  font-size: 12px;
+}
+.app-header .header-actions {
+  margin-left: 0;
+}
+.header-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ffffff15;
+  background: #17171e;
+  border-radius: 8px;
+  padding: 0 10px;
+  color: #8c8c9a;
+  max-width: 320px;
+}
+.header-search input {
+  border: 0;
+  background: transparent;
+  width: 190px;
+  padding: 10px 0;
+  font-size: 11px;
+}
+.header-search button {
+  font-size: 10px;
+  color: #c9f276;
+  padding: 5px;
+}
+.app-main {
+  min-height: 70vh;
+}
+.app-footer {
+  padding: 32px 5%;
+  gap: 25px;
+}
+.footer-links {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-links button {
+  font-size: 10px;
+  color: #9999a9;
+  padding: 3px 0;
+}
+.footer-links button:hover {
+  color: var(--accent);
+}
+.personal-page {
+  padding: 65px 5%;
+  min-height: 70vh;
+}
+.personal-page h1 {
+  font-size: 33px;
+  letter-spacing: -1px;
+}
+.personal-page > p {
+  margin: 15px 0 35px;
+}
+.server-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.server-tabs button {
+  border: 1px solid #ffffff20;
+  border-radius: 6px;
+  color: #a7a7b7;
+  padding: 9px 14px;
+  font-size: 11px;
+}
+.server-tabs .selected {
+  background: #c9f2760d;
+  border-color: #c9f27666;
+  color: var(--accent);
+}
+.episode-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: #1b1b23;
+  border-radius: 6px;
+  border: 1px solid #ffffff0b;
+  color: #777;
+  max-width: 220px;
+  margin: 15px 0;
+}
+.episode-filter input {
+  padding: 3px;
+  background: none;
+  border: 0;
+  width: 100%;
+  font-size: 11px;
+}
+@media (max-width: 1150px) {
+  .app-header {
+    gap: 20px;
+  }
+  .app-header nav {
+    gap: 16px;
+  }
+  .app-header nav button {
+    font-size: 11px;
+  }
+  .header-search input {
+    width: 145px;
+  }
+}
+@media (max-width: 950px) {
+  .app-header nav {
+    gap: 13px;
+  }
+  .header-search input {
+    width: 115px;
+  }
+  .header-search button span {
+    display: none;
+  }
+  .footer-links {
+    gap: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .app-header {
+    height: 70px;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .app-header .logo {
+    font-size: 22px;
+  }
+  .app-header .header-search {
+    margin-left: auto;
+    max-width: 180px;
+    gap: 7px;
+    padding: 0 8px;
+  }
+  .header-search input {
+    width: 100px;
+    font-size: 10px;
+  }
+  .app-header .header-actions {
+    gap: 0;
+  }
+  .app-header .login {
+    font-size: 9px;
+    padding: 8px;
+  }
+  .app-header nav.mobile-open {
+    top: 70px;
+    height: auto;
+    gap: 22px;
+  }
+  .app-header nav button {
+    font-size: 11px;
+  }
+  .app-footer {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .footer-links {
+    max-width: 220px;
+    gap: 13px;
+    font-size: 9px;
+  }
+  .personal-page {
+    padding: 40px 5%;
+  }
+  .personal-page h1 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 390px) {
+  .header-search input {
+    width: 65px;
+  }
+  .app-header {
+    gap: 8px;
+  }
+  .header-search svg {
+    width: 13px;
+  }
+}

@@ -1,0 +1,92 @@
+.hero-carousel-controls {
+  position: absolute;
+  right: 5%;
+  bottom: 25px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: #0c0c1075;
+  backdrop-filter: blur(10px);
+  padding: 9px 13px;
+  border: 1px solid #ffffff15;
+  border-radius: 30px;
+}
+.hero-carousel-controls > button {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  color: #c6c6d0;
+  padding: 0;
+}
+.hero-carousel-controls > button:hover {
+  background: #ffffff10;
+  color: var(--accent);
+}
+.hero-carousel-controls > span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #9595a4;
+  margin: 0 2px;
+}
+.hero-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.hero-carousel-dots button {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border-radius: 6px;
+  background: #ffffff40;
+  transition:
+    width 0.2s,
+    background 0.2s;
+}
+.hero-carousel-dots button.active {
+  width: 22px;
+  background: var(--accent);
+}
+.hero-slide-content {
+  animation: hero-content-in 0.4s ease both;
+}
+@keyframes hero-content-in {
+  from {
+    opacity: 0.2;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 700px) {
+  .hero-carousel-controls {
+    bottom: 15px;
+    right: 5%;
+    gap: 8px;
+    padding: 5px 9px;
+  }
+  .hero-carousel-controls > span {
+    font-size: 8px;
+  }
+  .hero-carousel-controls > button {
+    height: 23px;
+    width: 23px;
+  }
+  .hero-carousel-dots {
+    gap: 6px;
+  }
+  .discover-hero {
+    padding-bottom: 75px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide-content {
+    animation: none;
+  }
+  .hero-carousel-dots button {
+    transition: none;
+  }
+}

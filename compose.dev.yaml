@@ -1,0 +1,4 @@
+# Optional local PostgreSQL port for npm run dev. Never use this override on a VPS.
+services:
+  db:
+    ports: ['127.0.0.1:5432:5432']
